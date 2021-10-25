@@ -239,3 +239,48 @@ footer p{
     margin-left: 40px;
     margin-right: 40px;
 }
+
+.menu ul{
+    float: left;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.menu-section{
+    padding-bottom: 100px;
+}
+
+.about-float-container {
+    padding: 40px;
+    display: flex;
+}
+
+.about-float-child {
+    flex: 1;
+    width: 50%;
+    float: left;
+    padding: 40px;
+}
+.membership-container{
+    margin-left: 20%;
+    font-size: 20px;
+    text-align: center;
+    width: 60%;
+    border: rgba(77, 36, 18, 0.89) solid 2px;
+}
+.membership-container input{
+    margin: 20px;
+}
+.membership-container input[type=submit]{
+    background: #501e13;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.membership-container input[type=submit]:hover {
+    background: rgba(115, 42, 27, 0.76);
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home page</title>
+    <title>Title</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -27,57 +27,61 @@
         </div>
 
     </header>
-    <!-- ======= Banner Section ======= -->
-    <section class="banner-section">
+    <!-- ======= Menu Section ======= -->
+    <section class="about-section">
         <div class="container-main">
-            <div class="banner">
-                <div class="banner-text">
-                    <h1>Enjoy Hot and Fresh Grills, <br/>Here!</h1>
+            <div class="about-float-container">
+                <div class="about-float-child">
+                    <img src="img/about.jpg">
+                </div>
+                <div class="about-float-child">
+                    <br/><br/><br/><br/>
+                    <h2>About Us</h2>
+                    <br/>
+                    <p>We are a food & beverage concepts company that is proud to fly the flag of Grill and Burgers in Singapore, and are committed to bringing people together to enjoy our food and to create amazing dining experiences for our guests.
+
+
+
+                        We work with producers to bring only the best, quality ingredients to our restaurants that bring out the flavours of our dishes.
+
+
+
+                        When you dine here, expect pitch perfect American-style cooking, we serve up our own creative recipes of rum infused cocktails.
+
+
+
+                        Our promise is truly, a dining experience you won’t forget.
+
+
+
+                        There’s only one word to describe it all… AMAZING!</p>
+
                 </div>
 
             </div>
-        </div>
+            <div class="membership-container">
+                <form class="jobs_form" method="get">
+                    <label for="name">
+                        Name:
+                    </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name here" required onchange="validateName()">
+                    <br/>
+                    <label for="email">
+                        E-mail:
+                    </label>
+                    <input type="text" name="email" id="email" placeholder="Enter your Email-ID here" required onchange ="validateEmail()">
+                    <br/>
 
-    </section>
-    <!-- ======= Promo Section ======= -->
-    <section class="promo-section">
-        <div class="container-main">
-            <div class="promo">
-                <ul>
-                    <li><div class="card">
-                        <img src="img/set1.jpg" alt="set1">
-                        <div class="container-card">
-                            <h4><b>Classic Set Meal</b></h4>
-                            <p>Angus Beef Burger with Curly Fries and Drink</p>
-                            <h4>$ 15.90</h4>
-                            <button onclick="">Add to Cart</button>
-                        </div>
-                    </div></li>
-                    <li><div class="card">
-                        <img src="img/set2.jpg" alt="set2">
-                        <div class="container-card">
-                            <h4><b>Fishy Set Meal</b></h4>
-                            <p>Fish Burger With Tartar Sauce with Potato Wedges</p>
-                            <h4>$ 12.90</h4>
-                            <button onclick="">Add to Cart</button>
-                        </div>
-                    </div></li>
-                    <li><div class="card">
-                        <img src="img/set3.jpg" alt="set3">
-                        <div class="container-card">
-                            <h4><b>Steak Platter</b></h4>
-                            <p>Freshest Tomahawk steak seared on the super-heated Lava Stone.</p>
-                            <h4>$ 22.90</h4>
-                            <button onclick="">Add to Cart</button>
-                        </div>
-                    </div></li>
-                </ul>
+                    <input type="submit" onclick="return validateForm()" value="Apply Now">
 
+
+                </form>
 
             </div>
         </div>
-
     </section>
+    <!-- ======= Promo Section ======= -->
+
     <!-- ======= Footer ======= -->
     <footer>
         <div class="footer">
@@ -96,11 +100,11 @@
             <div class="footer-details">
                 <ul class="footer-details-ul">
                     <li><p>
-                            50 Nanyang Ave<br>SG 639798<br>
-                            </strong> +65 6791 1744<br>
-                            </strong> info@grillhouse.sg<br>
-                            </strong> 11AM - 11PM
-                        </p></li>
+                        50 Nanyang Ave<br>SG 639798<br>
+                        </strong> +65 6791 1744<br>
+                        </strong> info@grillhouse.sg<br>
+                        </strong> 11AM - 11PM
+                    </p></li>
                     <li><img class="logoImage-footer" src="img/logo.png" alt="Logo"></li>
 
                 </ul>
@@ -114,7 +118,7 @@
         </div>
     </footer>
 
-
+    <script type="text/javascript" src="js/about.js"></script>
 </div>
 
 </body>
