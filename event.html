@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    <title>Events</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -27,62 +27,45 @@
         </div>
 
     </header>
-    <!-- ======= Menu Section ======= -->
-    <section class="about-section">
+    <!-- ======= Event Section ======= -->
+    <section class="event">
         <div class="container-main">
-            <div class="about-float-container">
-                <div class="about-float-child">
-                    <img src="img/about.jpg">
-                </div>
-                <div class="about-float-child">
-                    <br/><br/><br/><br/>
-                    <h2>About Us</h2>
-                    <br/>
-                    <p>We are a food & beverage concepts company that is proud to fly the flag of Grill and Burgers in Singapore, and are committed to bringing people together to enjoy our food and to create amazing dining experiences for our guests.
+            <ul class="event-ul">
+                <li><div class="event-img">
+                    <img src="img/event1.jpg" alt="event1">
+                    <h1>Company Gathering</h1>
 
+                </div></li>
 
+                <li><div class="event-img">
+                    <img src="img/event2.png" alt="event2">
+                    <h1> Sports Night</h1>
 
-                        We work with producers to bring only the best, quality ingredients to our restaurants that bring out the flavours of our dishes.
+                </div></li>
+                <li><div class="event-img">
+                    <img src="img/event3.jpg" alt="event3">
+                    <h1> Play Darts</h1>
 
-
-
-                        When you dine here, expect pitch perfect American-style cooking, we serve up our own creative recipes of rum infused cocktails.
-
-
-
-                        Our promise is truly, a dining experience you won’t forget.
-
-
-
-                        There’s only one word to describe it all… AMAZING!</p>
-
-                </div>
-
-            </div>
-            <div class="membership-container">
-                <h1> Be a Member of Us!</h1>
-                <form class="jobs_form" method="get">
-                    <label for="name">
-                        Name:
-                    </label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name here" required onchange="validateName()">
-                    <br/>
-                    <label for="email">
-                        E-mail:
-                    </label>
-                    <input type="text" name="email" id="email" placeholder="Enter your Email-ID here" required onchange ="validateEmail()">
-                    <br/>
-
-                    <input type="submit" onclick="return validateForm()" value="Apply Now">
-
-
-                </form>
-
-            </div>
+                </div></li>
+            </ul>
         </div>
-    </section>
-    <!-- ======= Promo Section ======= -->
 
+    </section>
+    <!-- ======= Reservation Section ======= -->
+    <section class="reservation">
+        <div class="container-main">
+            <form class="reservation-form" method="get">
+                <h2>Make Reservations with Us!</h2><br/>
+
+                <input type="date" name="date" id="date" onchange="validateStartDate()" placeholder="Date">
+                <input type="time" id="time" name="time" min="09:00" max="21:00" placeholder="Time">
+                <input type="number" id="pax" name="pax" min=0 max=12 placeholder="Pax">
+                <input type="submit" value="Book Now">
+
+            </form>
+        </div>
+
+    </section>
     <!-- ======= Footer ======= -->
     <footer>
         <div class="footer">
@@ -118,9 +101,8 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="js/event.js"></script>
 
-    <script type="text/javascript" src="js/about.js"></script>
 </div>
-
 </body>
 </html>

@@ -284,3 +284,68 @@ footer p{
 .membership-container input[type=submit]:hover {
     background: rgba(115, 42, 27, 0.76);
 }
+.event {
+    text-align: center;
+    padding-bottom: 100px;
+}
+.event-img img{
+    width:400px;
+    height:350px;
+    object-fit:scale-down;
+
+}
+.event-ul{
+    padding: 0;
+    margin: 24px auto auto;
+    text-align: center;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.event-ul li{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.reservation{
+    height: 300px;
+    text-align: center;
+    width: 70%;
+}
+.reservation-form{
+    margin-left: 60%;
+    background-color: rgba(255, 236, 209, 0.6);
+}
+.reservation-form input{
+    font-size: 14px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+
+}
+.reservation-form input:focus {
+    border: 3px solid #555;
+}
+.reservation-form:hover {
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.47);
+}
+
+/* Add some padding inside the card container */
+.reservation-form {
+    padding: 2px 16px;
+}
+.reservation-form input[type=submit]{
+    background: #501e13;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.reservation-form input[type=submit]:hover {
+    background: rgba(115, 42, 27, 0.76);
+}
