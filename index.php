@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,13 +10,13 @@
     <header>
         <div class="header">
             <!-- ======= Logo ======= -->
-            <a href="index.html" class="logo">
+            <a href="index.php" class="logo">
                 <img class="logoImage" src="img/logo.png" alt="Logo">
             </a>
             <!-- ======= Nav bar ======= -->
             <nav id="navbar" class="navbar">
                 <ul class="nav-ul">
-                    <li><a class="nav-li" href="index.html">Home</a></li>
+                    <li><a class="nav-li" href="index.php">Home</a></li>
                     <li><a class="nav-li" href="menu.php">Menu</a></li>
                     <li><a class="nav-li" href="order.php">Order</a></li>
                     <li><a class="nav-li" href="about.html">About</a></li>
@@ -43,6 +42,17 @@
     <section class="promo-section">
         <div class="container-main">
             <div class="promo">
+                <?php //catalog.php
+                session_start();
+                if (!isset($_SESSION['cart'])){
+                    $_SESSION['cart'] = array();
+                }
+                if (isset($_GET['buy'])) {
+                    $_SESSION['cart'][] = $_GET['buy'];
+                    header('location: ' . $_SERVER['PHP_SELF']. '?' . SID);
+                    exit();
+                }
+                ?>
                 <ul>
                     <li><div class="card">
                         <img src="img/set1.jpg" alt="set1">
@@ -50,7 +60,7 @@
                             <h4><b>Classic Set Meal</b></h4>
                             <p>Angus Beef Burger with Curly Fries and Drink</p>
                             <h4>$ 15.90</h4>
-                            <button onclick="">Add to Cart</button>
+                            <?php echo "<a class = 'order-link' href='" .$_SERVER['PHP_SELF']. '?buy=0'. "'> Add to Cart</a> <br/><br/>";  ?>
                         </div>
                     </div></li>
                     <li><div class="card">
@@ -59,7 +69,7 @@
                             <h4><b>Fishy Set Meal</b></h4>
                             <p>Fish Burger With Tartar Sauce with Potato Wedges</p>
                             <h4>$ 12.90</h4>
-                            <button onclick="">Add to Cart</button>
+                            <?php echo "<a class = 'order-link' href='" .$_SERVER['PHP_SELF']. '?buy=1'. "'> Add to Cart</a> <br/><br/>";  ?>
                         </div>
                     </div></li>
                     <li><div class="card">
@@ -68,7 +78,7 @@
                             <h4><b>Steak Platter</b></h4>
                             <p>Freshest Tomahawk steak seared on the super-heated Lava Stone.</p>
                             <h4>$ 22.90</h4>
-                            <button onclick="">Add to Cart</button>
+                            <?php echo "<a class = 'order-link' href='" .$_SERVER['PHP_SELF']. '?buy=2'. "'> Add to Cart</a> <br/><br/>";  ?>
                         </div>
                     </div></li>
                 </ul>
@@ -81,13 +91,13 @@
     <!-- ======= Footer ======= -->
     <footer>
         <div class="footer">
+            <hr/>
             <div class="footer-nav">
                 <nav class="navbar">
-                    <h4>Useful Links</h4>
                     <ul class="nav-ul">
-                        <li><a class="nav-li" href="index.html">Home</a></li>
+                        <li><a class="nav-li" href="index.php">Home</a></li>
                         <li><a class="nav-li" href="menu.php">Menu</a></li>
-                        <li><a class="nav-li" href="order_temp.html">Order</a></li>
+                        <li><a class="nav-li" href="order.php">Order</a></li>
                         <li><a class="nav-li" href="about.html">About</a></li>
                         <li><a class="nav-li" href="event.html">Event</a></li>
                     </ul>
