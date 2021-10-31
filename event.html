@@ -57,12 +57,25 @@
     <!-- ======= Reservation Section ======= -->
     <section class="reservation">
         <div class="container-main">
-            <form class="reservation-form" method="get">
+            <form action="reservationconfirm.php" method = "POST">
                 <h2>Make Reservations with Us!</h2><br/>
+				
+				<label for="name">
+                        Name:
+                    </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name here" required onchange="validateName()">
+                    <br/>
 
+				<label for="email">
+                        E-mail:
+                    </label>
+                    <input type="text" name="email" id="email" placeholder="Enter your Email-ID here" required onchange ="validateEmail()">
+                    <br/>
+				
                 <input type="date" name="date" id="date" onchange="validateStartDate()" placeholder="Date">
                 <input type="time" id="time" name="time" min="09:00" max="21:00" placeholder="Time">
                 <input type="number" id="pax" name="pax" min=0 max=12 placeholder="Pax">
+				
                 <input type="submit" value="Book Now">
 
             </form>
@@ -105,7 +118,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/event.js"></script>
-
+	<script type="text/javascript" src="js/about.js"></script>
 </div>
 </body>
 </html>
