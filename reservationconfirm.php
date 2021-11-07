@@ -1,4 +1,5 @@
 <?php  //reservationconfirm.php
+include "reservation_email.php";
 $link = mysqli_connect("localhost", "f32ee", "f32ee", "f32ee");
 
 if($link === false) {
