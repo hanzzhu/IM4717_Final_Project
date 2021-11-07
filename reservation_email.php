@@ -17,11 +17,14 @@ $message = '<html><body>';
 $message .= '<h1 style="color:#f40;">Hi echo .$_POST["name"]. </h1>';
 $message .= '<p style="color:#080;font-size:18px;">We have successfully received your reservation request for echo .$_POST["pax"]. </p>';
 $message .= '<p style="color:#080;font-size:18px;">Below is a summary of the information you provided.</p>';
-$message .= '<p style="color:#080;font-size:18px;">echo 'Name: ' . $_POST ["name"] .</p>';
-$message .= '<p style="color:#080;font-size:18px;">echo 'Date: ' . $_POST ["date"] .</p>';
-$message .= '<p style="color:#080;font-size:18px;">echo 'Time: ' . $_POST ["time"] .</p>';
+$string1 = "Name: ".$_POST ["name"];
+$message .= '<p style="color:#080;font-size:18px;">echo $string1 .</p>';
+$string2 = "Date: ".$_POST ["date"];
+$message .= '<p style="color:#080;font-size:18px;">echo $string2 .</p>';
+$string3 = "Time: ".$_POST ["time"];
+$message .= '<p style="color:#080;font-size:18px;">echo $string3 .</p>';
 $message .= '</body></html>';
- 
+
 // Sending email
 if(mail($to, $subject, $message, $headers)){
     echo 'Your mail has been sent successfully.';

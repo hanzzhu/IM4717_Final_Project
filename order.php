@@ -168,7 +168,8 @@ if (isset($_GET['buy'])) {
                                 $query_insert = "INSERT INTO `orders`( `name`, `price`, `datetime`,`total_sales`) VALUES ('$name','$price','$datetime','$total')";
                                 $query_test ="INSERT INTO `orders`(`datetime`) VALUES ('$datetime')";
                                 mysqli_query($conn, $query_insert);
-                                $_SERVER['PHP_SELF']['empty'] = 1;
+                                unset($_SESSION['cart']);
+                                echo "<meta http-equiv='refresh' content='0'>";
                             }
                             ?>
                         </div>
