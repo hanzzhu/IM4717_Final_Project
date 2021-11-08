@@ -547,3 +547,30 @@ hr{
     border-bottom: 2px solid #dee2e6; }
 .table tbody + tbody {
     border-top: 2px solid #dee2e6; }
+
+.reservationconfirm {
+ margin-top: 50px;
+    border: #501e13 solid 5px;
+    padding: 30px 0;
+    margin-bottom: 50px;
+    color: #fff;
+    width: 100%;
+    float: left;
+    clear: left;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.reservationconfirm-text{
+ font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -1px;
+    text-transform: none;
+    font-size: 28px;
+    text-align: center;
+    height: 300px;
+    color: #8d1c1c;
+    text-shadow: 1px 0 0 #fff, -2px 0 0 #fff, 0 1px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
