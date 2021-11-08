@@ -57,6 +57,9 @@ mysqli_close($link);
                 </ul>
             </nav>
         </div>
+<section class = "banner-section">
+<div class="reservationconfirm">
+<div class = "reservationconfirm-text">
 		
 <h1>Confirmation Page for Reservation</h1>
 
@@ -65,12 +68,18 @@ mysqli_close($link);
 <p>We have successfully received it. 
 
 <p>Below is a summary of the information you provided.<br><br> 
-
 <?php
-echo 'Name: ' . $_POST ["name"] . '<br>';
-echo 'Date: ' . $_POST ["date"] . '<br>';
-echo 'Time: ' . $_POST ["time"] . '<br>';
+echo 'Name: ' . $_POST ["name"] .'<br>';
+echo "<br/>";
+echo 'Date: ' . $_POST ["date"] .'<br>'; 
+echo "<br/>";
+echo 'Time: ' . $_POST ["time"] .'<br>'; 
+
+
 ?>
+</div>
+</div>
+</section>
 
 <footer>
         <div class="footer">
