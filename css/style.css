@@ -321,12 +321,20 @@ footer p{
     margin-right: 20px;
 }
 .reservation{
-    height: 300px;
+    height: 500px;
     text-align: center;
     width: 70%;
 }
 .reservation-form{
     margin-left: 60%;
+    background-color: rgba(255, 236, 209, 0.6);
+}
+.reservation-result{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 30%;
+    margin-right: 30%;
     background-color: rgba(255, 236, 209, 0.6);
 }
 .reservation-form input{
@@ -513,7 +521,7 @@ hr{
 }
 .checkout-button{
     margin-top: 2.5%;
-    margin-left: 80%;
+    margin-left: 25%;
     margin-bottom: 50px;
     width: 100px;
     height: 40px;
@@ -549,7 +557,8 @@ hr{
     border-top: 2px solid #dee2e6; }
 
 .reservationconfirm {
- margin-top: 50px;
+    height: 600px;
+    margin-top: 50px;
     border: #501e13 solid 5px;
     padding: 30px 0;
     margin-bottom: 50px;
@@ -564,13 +573,13 @@ hr{
 }
 
 .reservationconfirm-text{
- font-weight: 400;
+    font-weight: 400;
     line-height: 20px;
     letter-spacing: -1px;
     text-transform: none;
-    font-size: 28px;
+    font-size: 18px;
     text-align: center;
-    height: 300px;
+    height: 40%;
     color: #8d1c1c;
     text-shadow: 1px 0 0 #fff, -2px 0 0 #fff, 0 1px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }

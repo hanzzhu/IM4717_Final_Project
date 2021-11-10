@@ -63,7 +63,6 @@ function validateForm(){
         alert("Please check your input again ");
         return false
     }else{
-        alert("Thank you for the application!")
         return true
     }
 

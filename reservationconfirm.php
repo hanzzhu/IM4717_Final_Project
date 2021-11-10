@@ -1,36 +1,3 @@
-<?php  //reservationconfirm.php
-include "reservation_email.php";
-$link = mysqli_connect("localhost", "f32ee", "f32ee", "f32ee");
-
-if($link === false) {
-	die(("ERROR: Could not connect. " . mysqli_connect_error()));
-}
-foreach ($_POST as $post){
-
-$name = $_POST["name"];
-$email = $_POST["email"];
-$date = $_POST["date"];
-$time = $_POST["time"];
-$pax = $_POST["pax"];
-
-}
-echo $name;
-echo $email;
-echo $date;
-echo $time;
-echo $pax;
-$sql = "INSERT INTO reservationform (name, email, date, time, pax) VALUES ('$name', '$email', '$date', '$time', '$pax')";
-if(mysqli_query($link, $sql)){
-    echo "Records inserted successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
- 
-// Close connection
-mysqli_close($link);
-?>
-
-
 <html>
 <head>
 <meta charset="UTF-8">
@@ -57,29 +24,67 @@ mysqli_close($link);
                 </ul>
             </nav>
         </div>
-<section class = "banner-section">
-<div class="reservationconfirm">
-<div class = "reservationconfirm-text">
-		
-<h1>Confirmation Page for Reservation</h1>
+        <?php
+        $link = mysqli_connect("localhost", "f32ee", "f32ee", "f32ee");
 
-<p>Thank you for submitting this form. 
+        if($link === false) {
+            die(("ERROR: Could not connect. " . mysqli_connect_error()));
+        }
+        foreach ($_POST as $post){
 
-<p>We have successfully received it. 
+            $name = $_POST["name"];
+            $email = $_POST["email"];
+            $date = $_POST["date"];
+            $time = $_POST["time"];
+            $pax = $_POST["pax"];
 
-<p>Below is a summary of the information you provided.<br><br> 
-<?php
-echo 'Name: ' . $_POST ["name"] .'<br>';
-echo "<br/>";
-echo 'Date: ' . $_POST ["date"] .'<br>'; 
-echo "<br/>";
-echo 'Time: ' . $_POST ["time"] .'<br>'; 
+        }
+        $sql = "INSERT INTO reservationform (name, email, date, time, pax) VALUES ('$name', '$email', '$date', '$time', '$pax')";
+        mysqli_query($link, $sql);
 
 
-?>
-</div>
-</div>
-</section>
+
+
+        $to = "f32ee@localhost";
+        $subject = 'Confirmation For Reservation';
+        $from = 'info@grillhouse.sg';
+
+        // To send HTML mail, the Content-type header must be set
+        $headers = 'From: info@grillhouse.sg' . "\r\n" .
+            'Reply-To: f32ee@localhost' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+
+        $name = $_POST ["name"];
+        $date = $_POST ["date"];
+        $time = $_POST ["time"];
+        $email = $_POST ["email"];
+        $pax = $_POST ["pax"];
+
+        $message = "Hi ".$name.", thank you for your booking ! ";
+        $message .= "\r\nYour email address is:".$email ;
+        $message .= "\r\nDate: ".$date." Time: ".$time." Pax: ".$pax ;
+        // Sending email
+        mail($to, $subject, $message, $headers,'-ff32ee@localhost');
+        ?>
+		<div class="reservation-result">
+            <div class= 'reservationconfirm-text'>
+            <h3 style="padding: 20px">Confirmation Page for Reservation</h3>
+
+            <p>Thank you for submitting this form.</p>
+
+            <p>We have successfully received it.</p>
+
+            <p>An email has been sent to you.</p>
+
+            <p>Below is a summary of the information you provided.</p><br><br>
+
+                <?php
+                echo 'Name: ' . $_POST ["name"] . '<br>';
+                echo 'Date: ' . $_POST ["date"] . '<br>';
+                echo 'Time: ' . $_POST ["time"] . '<br>';
+                echo 'Number of Pax: ' . $_POST ["pax"] . '<br>';
+                ?>
+        </div></div>
 
 <footer>
         <div class="footer">

@@ -147,8 +147,12 @@ if (isset($_GET['buy'])) {
                     <hr>
                     <div class="cart-checkout">
                         <div class="cart-checkout-total">
-                            <form class="total-amount" method="post" onsubmit="checkout()">
-                                <input type="submit" class="checkout-button" name="checkout-button" value="Checkout"/>
+                            <form class="total-amount" method="POST" onsubmit="checkout()">
+                                <label for="phone" style="height: 30px">Phone Number:</label>
+                                <input type="number" name="phone" class="phone" id="phone" style="height: 30px" onchange="checkphone()">
+
+                                <input type="submit" class="checkout-button" name="checkout-button" value="Checkout"/><br/>
+
                             </form>
                             <?php
                             $servername = "localhost";
@@ -160,13 +164,13 @@ if (isset($_GET['buy'])) {
                             if (!$conn) {
                                 die("Connection failed: " . mysqli_connect_error());
                             }
+                            $phone = $_POST['phone'];
                             if(isset($_POST['checkout-button'])) {
                                 $name = join(",",$sql_name_array);
                                 $price = join(",",$sql_price_array);
                                 $datetime = date('Y-m-d H:i:s');
                                 $total = floatval($total);
-                                $query_insert = "INSERT INTO `orders`( `name`, `price`, `datetime`,`total_sales`) VALUES ('$name','$price','$datetime','$total')";
-                                $query_test ="INSERT INTO `orders`(`datetime`) VALUES ('$datetime')";
+                                $query_insert = "INSERT INTO `orders`( `name`, `price`, `datetime`,`total_sales`,`phone`) VALUES ('$name','$price','$datetime','$total','$phone')";
                                 mysqli_query($conn, $query_insert);
                                 unset($_SESSION['cart']);
                                 echo "<meta http-equiv='refresh' content='0'>";

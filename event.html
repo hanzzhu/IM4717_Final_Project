@@ -57,9 +57,9 @@
     <!-- ======= Reservation Section ======= -->
     <section class="reservation">
         <div class="container-main">
-            <form action="reservationconfirm.php" method = "POST">
+            <form class="reservation-form" action="reservationconfirm.php" method = "POST">
                 <h2>Make Reservations with Us!</h2><br/>
-				
+
 				<label for="name">
                         Name:
                     </label>
@@ -74,7 +74,7 @@
 				
                 <input type="date" name="date" id="date" onchange="validateStartDate()" placeholder="Date">
                 <input type="time" id="time" name="time" min="09:00" max="21:00" placeholder="Time">
-                <input type="number" id="pax" name="pax" min=0 max=12 placeholder="Pax">
+                <input type="number" id="pax" name="pax" min=1 max=12 placeholder="Pax">
 				
                 <input type="submit" value="Book Now">
 

@@ -40,10 +40,10 @@ CREATE TABLE IF NOT EXISTS `orders` (
 --
 
 INSERT INTO `orders` (`id`, `name`, `price`, `datetime`, `total_sales`) VALUES
-(1, 'Steak Platter,Mixed Grill,Classic Set Meal', '22.9,19.9,15.9', '2021-10-30 01:12:47', '58.7'),
-(2, 'Steak Platter,Mixed Grill,Classic Set Meal', '22.9,19.9,15.9', '2021-10-30 01:14:55', '58.7'),
-(3, 'Steak Platter', '22.9', '2021-10-30 01:16:03', '22.9'),
-(4, 'Steak Platter', '22.9', '2021-10-30 01:20:56', '22.9');
+(1, 'Steak Platter,Mixed Grill,Classic Set Meal', '22.9,19.9,15.9', '2021-10-30 01:12:47', 58.7),
+(2, 'Steak Platter,Mixed Grill,Classic Set Meal', '22.9,19.9,15.9', '2021-10-30 01:14:55', 58.7),
+(3, 'Steak Platter', '22.9', '2021-10-30 01:16:03', 22.9),
+(4, 'Steak Platter', '22.9', '2021-10-30 01:20:56', 22.9);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
