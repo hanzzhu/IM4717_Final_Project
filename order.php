@@ -123,6 +123,15 @@ if (isset($_GET['buy'])) {
                                 array_push($description_array,$value["description"]);
                                 array_push($price_array,floatval($value["price"]));
                             }
+                            $exam_array = array();
+                            foreach ($result as $key => $value) {
+                                if ($value["Rental Rate"]<20 && $value["star"] == '3'){
+                                    array_push($exam_array,[$value["id"],$value["name"]]);
+                                }
+                                array_push($item_array,$value["name"]);
+                                array_push($description_array,$value["description"]);
+                                array_push($price_array,floatval($value["price"]));
+                            }
                             for ($i=0; $i < count($_SESSION['cart']); $i++){
                                 array_push($sql_name_array,$item_array[$_SESSION['cart'][$i]]);
                                 array_push($sql_price_array,$price_array[$_SESSION['cart'][$i]]);
